@@ -5,6 +5,8 @@
 #define SMAZ2_H
 
 unsigned long smaz2_compress(unsigned char *dst, unsigned long dstlen, unsigned char *s, unsigned long len);
+unsigned long smaz2_compress_p(unsigned char *dst, unsigned long dstlen, unsigned char *s, unsigned long len, const char *bigrams, const char **words);
 unsigned long smaz2_decompress(unsigned char *dst, unsigned long dstlen, unsigned char *c, unsigned long len);
+unsigned long smaz2_decompress_p(unsigned char *dst, unsigned long dstlen, unsigned char *c, unsigned long len, const char *bigrams, const char **words);
 
 #endif

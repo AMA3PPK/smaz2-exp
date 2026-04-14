@@ -198,3 +198,10 @@ unsigned long smaz2_decompress(unsigned char *dst, unsigned long dstlen, unsigne
     }
     return orig_dstlen - dstlen;
 }
+
+unsigned long smaz2_compress_p(unsigned char *dst, unsigned long dstlen, unsigned char *s, unsigned long len, const char *bigrams, const char **words) {
+    return smaz2_compress(dst, dstlen, s, len);
+}
+unsigned long smaz2_decompress_p(unsigned char *dst, unsigned long dstlen, unsigned char *c, unsigned long len, const char *bigrams, const char **words) {
+    return smaz2_decompress(dst, dstlen, s, len);
+}
